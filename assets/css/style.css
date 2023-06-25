@@ -1,0 +1,92 @@
+body{
+    background-image: url(../image/stars.jpeg);
+    font-family: Tahoma;
+}
+
+/*Para el navbar*/
+.navbar{
+    padding: 0;
+    height: 200px;
+}
+
+.navbar>.container{
+    justify-content: center;
+}
+
+.navbar-brand{
+    margin: 0;
+}
+
+/*Para el main*/
+#personajes{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(20, 1fr);
+    justify-items: center;
+    gap: 20px;
+    margin: 20px 0 20px 0;
+}
+
+.bloque{
+    display: flex;
+}
+
+.portal{
+    height: 376px;
+}
+
+.content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 40%;
+    overflow: hidden;
+    width: 0;
+    transition: width 0.35s ease;
+}
+
+.active{
+    width: 270px;
+    transition: width 0.35s ease;
+}
+
+.text {
+    width: 256px; 
+    height: auto; 
+    background: #41b4c9;
+    padding: 5px;
+    border-radius: 0 0 50px 20px;
+    box-shadow: 3px 2px 10px 2px #bfde42;
+ }
+
+.img-top{
+    width: 16rem;
+    border-radius: 20px 50px 0 0;
+    box-shadow: 3px -2px 10px 2px #bfde42;
+}
+
+.card-text{
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 750px){
+    #personajes{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+    }
+}
+
+@media screen and (min-width: 1050px){
+    #personajes{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+    }
+}
+
+@media screen and (min-width: 1350px){
+    #personajes{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
